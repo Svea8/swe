@@ -45,7 +45,7 @@ b7.preis=15.99;
 let warenkorb= new Array();
 warenkorb=[b1,b3,b6];
 
-//Gesamtpreis berechnen und Umwandlung in String
+//Gesamtpreis berechnen
 function gesamtPreis(){
     let gesamt=0;
 

@@ -5,18 +5,24 @@ function arrayAnlegen(){
 
 function arrayFuellen(a, laenge){
     for (let i=0; i<laenge; i++){
-        a[i]=Person_Zufallsname_Zufallsalter.name;
+        let p = new Person_Zufallsname_Zufallsalter();
+        a[i]=p.name;
     }
     return a;
 }
 
 function ausgabe(array){
-    for (let i=0; i<5; i++){
+    let ausg=[];
+    let zusammen="";
+    for (let i=0; i<array.length; i++){
+        ausg[i]=array[i].toString();
+        zusammen=zusammen+ausg[i]+", ";
         
     }
-    console.log(array);
+console.log(zusammen);
 }
 
 let arr=arrayAnlegen();
-let a=arrayFuellen(arr, 5);
+
+let a=arrayFuellen(arr, 7);
 ausgabe(a);

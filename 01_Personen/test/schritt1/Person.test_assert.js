@@ -3,7 +3,7 @@ describe('Array fuellen', function() {
 	describe('testArrayFuellen_Laenge10', function() {
 		seed = 1; /*Zufallsgenerator zurücksetzen */
 		let x = 10;
-		//1. Schritt: Vorbeingung: Array anlegen
+		//1. Schritt: Vorbedingung: Array anlegen
 		let personen = arrayAnlegen();
 		
 		//2. Schritt: zu testende Funktion aufrufen
