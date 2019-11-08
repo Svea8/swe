@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lottospiel</title>
+    <script src="src/loesung/lottospiel.js"></script>
+    <link rel="stylesheet" href="src/helper/lottospielGUI.css">
+</head>
+<body>
+    <h1>Lottospiel</h1>
+    
+    <div id="tipp">
+        <h2>Tipp</h2>
+    </div>
+    <div id="gezogen">
+        <h2>Ziehung</h2>
+    </div>
+    <div id="anzeige">
+        <h2 id="erg"></h2>
+        <button onclick="ziehen()">Lottozahlen ziehen</button>
+        <button onclick="reset()">Nochmal</button>
+        <h4 id="gewaehlt">Gewählte Zahlen:</h4><br>
+        <h4 id="ziehung">Gezogene Zahlen:</h4>
+    </div>
+
+    <script src="src/helper/lottospielGUI.js"></script>
+</body>
+</html>

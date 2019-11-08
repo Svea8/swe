@@ -1,0 +1,45 @@
+#tipp {
+    display: inline-block;
+    width: 300px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    background: sandybrown;
+}
+
+#gezogen,
+#anzeige {
+    align-self:;
+    display: inline-block;
+    width: 300px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    background: rgb(27, 151, 182);
+}
+
+#gewaehlt,
+#ziehung,
+#richtige {
+    display: inline-block;
+}
+
+.check {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid darkred;
+    border-radius: 5px;
+}
+
+button {
+    display: inline-block;
+    border: none;
+    padding: 10px;
+    color: whitesmoke;
+    background: rgb(9, 92, 112);
+    border-radius: 10px
+}

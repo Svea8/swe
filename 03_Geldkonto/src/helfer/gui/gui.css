@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+    padding: 5px 0;
+}
+
+h3 {
+    padding-top: 1em;
+}
+
+input {
+    padding: 5px;
+    margin: 5px 0;
+    text-align: center;
+}
+
+
+#wrapper {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: 4fr 1fr;
+    width: 100%;
+}
+
+#wrapper div {
+    padding: 0.5rem;
+}
+
+#eingaben {
+    margin: 2rem 0 2rem 2rem;
+    border: 10px solid rgb(161, 161, 161);
+    min-width: 160px;
+    display: flex;
+    flex-direction: column;
+}
+
+#eingaben > div {
+    width: 100%;
+    display: grid;
+}
+
+#eingaben h2{
+    grid-column: 1/3;
+}
+
+.button51, #ausgabe > div > div > div {
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    padding: 0;
+}
+
+#button1fr {
+    grid-template-columns: 1fr !important;
+}
+
+#eingaben>div>div>div input {
+    width: 100%;
+}
+
+#ausgabe {
+    margin: 2rem 2rem 2rem 0;
+    border: 10px solid rgb(161, 161, 161);
+}
+
+#ausgabe input[type=number] {
+    width: 100%;
+}
+
+#ausgabe input[type=number]::-webkit-inner-spin-button, #ausgabe input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+#eingaben > div#neuesKonto{
+    grid-template-columns: 1fr 1fr;
+}
+
+#neuesKonto{
+    grid-template-columns: 1fr;
+    margin-bottom: 4rem;
+    grid-column-gap: 1rem;
+}
+
+#neuesKonto > div{
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 5px 0 0 0px;
+}
+
+#neuesKontoOk, #neuesKonto>h4{
+    grid-column: 1/3;
+}
+
+.inputFehler {
+    animation-name: inputRed;
+    animation-duration: 0.5s;
+    animation-iteration-count: 2;
+}
+
+@keyframes inputRed {
+    0% {
+        box-shadow: initial;
+    }
+    50% {
+        box-shadow: 0px 0px 5px 0px rgba(255, 0, 0, 1);
+        color: red;
+    }
+    100% {
+        box-shadow: initial;
+    }
+}
+
+#log {
+    grid-column: 1/3;
+    margin: 4rem 2rem 0 2rem;
+    border: 5px solid rgb(161, 161, 161);
+    height: 250px;
+    overflow: scroll;
+}
+
+#log > div{
+    padding: 0;
+}
+
+#log p{
+    font-size: 0.9rem;
+}
+
+
+/* width */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    background: #fff;
+    border-radius: 5px;
+}
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+@media only screen and (max-width: 760px) {
+    #wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+    }
+    #eingaben {
+        margin: 0;
+        width: 100%;
+    }
+    #ausgabe {
+        margin: 1rem 0 0 0;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+    #ausgabe>div {
+        width: 50%;
+    }
+    #ausgabe>div div {
+        padding-bottom: 0;
+    }
+
+    #log{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 440px) {
+    #eingaben > div#neuesKonto {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    #neuesKontoOk, #neuesKonto>h4 {
+        grid-column: initial;
+    }
+}
+

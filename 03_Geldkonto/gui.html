@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Geldkonto</title>
+    <script src="./src/loesung/Girokonto.js"></script>
+    <link rel="stylesheet" href="src/helfer/gui/gui.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="eingaben">
+            <div id="neuesKonto">
+                <h4>Konto Erstellen</h4>
+                <div>
+                    <input type="text" name="besitzer" placeholder="Name">
+                </div>
+                <div>
+                    <input type="number" name="zinssatz" placeholder="Zinssatz">
+                </div>
+                <div>
+                    <input type="number" name="dispolimit" placeholder="Dispolimit">
+                </div>
+                <div>
+                    <input type="number" name="dispozinssatz" placeholder="Dispozinssatz">
+                </div>
+                <div id="neuesKontoOk">
+                    <input type="button" name="neuesKonto" value="OK">
+                </div>
+            </div>
+            <div>
+                <h2>Girokonto von <b></b></h2>
+                <div>
+                    <h5>Einzahlen</h5>
+                    <div class="button51">
+                        <input type="number" name="Einzahlen" placeholder="2000">
+                        <input type="button" name="EinzahlenOK" value="OK">
+                    </div>
+                </div>
+                <div>
+                    <h5>Auszahlen</h5>
+                    <div class="button51">
+                        <input type="number" name="Auszahlen" placeholder="500">
+                        <input type="button" name="AuszahlenOK" value="OK">
+                    </div>
+                </div>
+                <div>
+                    <h5>Verzinsen</h5>
+                    <div id="button1fr">
+                        <input type="button" name="Verzinsen" value="Verzinsen">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="ausgabe">
+            <div>
+                <h4>Kontodaten</h4>
+                <p>Besitzer: <b></b></p>
+                <p>Kontostand: <b></b>€</p>
+                <p>Zinssatz: <b></b>%</p>
+                <p>Dispozinssatz: <b></b>%</p>
+                <p id="dl">Dispolimit: <b></b>€</p>
+
+            </div>
+            <div>
+                <div>
+                    <h5>Zinssatz ändern</h5>
+                    <div>
+                        <input type="number" name="Zinssatz" placeholder="Wert">
+                        <input type="button" name="ZinssatzOK" value="OK">
+                    </div>
+
+                </div>
+                <div>
+                    <h5>Dispozinssatz ändern</h5>
+                    <div>
+                        <input type="number" name="Dispozinssatz" placeholder="Wert">
+                        <input type="button" name="DispozinssatzOK" value="OK">
+                    </div>
+
+                </div>
+                <div>
+                    <h5>Dispolimit ändern</h5>
+                    <div>
+                        <input type="number" name="Dispolimit" placeholder="Wert">
+                        <input type="button" name="DispolimitOK" value="OK">
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div id="log">
+            <h4>Log</h4>
+            <div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="src/helfer//gui/gui.js"></script>
+
+</html>
