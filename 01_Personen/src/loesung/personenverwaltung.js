@@ -26,3 +26,5 @@ let arr=arrayAnlegen();
 
 let a=arrayFuellen(arr, 7);
 ausgabe(a);
+
+//Test
