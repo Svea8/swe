@@ -1,17 +1,17 @@
 class Punkt{
 
     //Konstruktor
-    constructor(){
+    /*constructor(){
         this.x = 0;
         this.y = 0;
     }
-
-    /*
-     constructor(x,y){
+*/
+    
+     constructor(x=0,y=0){
         this.x = x;
         this.y = y;
     }
-    */
+    
 
     //Quadrant Methode
     quadrant(){
