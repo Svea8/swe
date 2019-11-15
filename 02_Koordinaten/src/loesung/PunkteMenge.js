@@ -25,9 +25,9 @@ class PunkteMenge{
         return gesamt;
     }
 
-    punktHinzufügen(a,b){  
-        let temporär=new Punkt(a,b);
-        this.punkteArray.push(temporär);
+    punktHinzufuegen(a,b){  
+        let temporaer=new Punkt(a,b);
+        this.punkteArray.push(temporaer);
     }
 
     aktuelleAnzahl(){

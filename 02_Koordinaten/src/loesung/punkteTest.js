@@ -10,10 +10,10 @@ let l= new PunkteMenge();
 //let m=l.allePunkteAusgeben();
 //console.log(m);
 
-let h1= l.punktHinzufügen(1,2);
-let h2= l.punktHinzufügen(5,5);
-let h3= l.punktHinzufügen(1,7);
-let h5= l.punktHinzufügen(1,5);
+let h1= l.punktHinzufuegen(1,2);
+let h2= l.punktHinzufuegen(5,5);
+let h3= l.punktHinzufuegen(1,7);
+let h5= l.punktHinzufuegen(1,5);
 
 let anz=l.aktuelleAnzahl();
 
