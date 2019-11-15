@@ -12,9 +12,7 @@ class PunkteMenge{
 
     zufaelligePunkteErzeugen(){
         for (let i=0; i<20; i++){
-            this.punkteArray[i]=new Punkt();
-            this.punkteArray[i].x= this.zufaelligeZahlErzeugen();
-            this.punkteArray[i].y= this.zufaelligeZahlErzeugen();
+            this.punkteArray[i]=new Punkt(this.zufaelligeZahlErzeugen(),this.zufaelligeZahlErzeugen());
         }
         return this.punkteArray;
     }
@@ -28,27 +26,25 @@ class PunkteMenge{
     }
 
     punktHinzufügen(a,b){  
-        for (let i=0; i<5; i++){
-            this.punkteArray[i]=new Punkt();
-            this.punkteArray[i].x=a;
-            this.punkteArray[i].y=b;
-            return this.punkteArray[i];
-        }
+        let temporär=new Punkt(a,b);
+        this.punkteArray.push(temporär);
     }
 
     aktuelleAnzahl(){
-        let anzahl=0;
-        while (punktHinzufügen()!=int){
-            anzahl++;
+        let anzahl=this.punkteArray.length;
 
-            
-        }
         return anzahl;
     }
 
-    entfernungBerechnung(p,b){
-
-    }
+   /* entfernungBerechnung(p,g){
+        let px = this.p.x;
+        let py = this.p.y;
+        let gx = this.g.x;
+        let gy = this.g.y;
+        let pyth =  (px-gx)*(px-gx)  + (py-gy)*(py-gy);
+        c= Math.sqrt(py);
+        return c;
+    }*/
 
     maximaleEntfernungBerechnen(){
 
