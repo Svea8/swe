@@ -14,9 +14,16 @@ let p4= new Punkt();
 p4.x=-16;
 p4.y=12;
 
-let qua=p1.quadrant();
-let ent=p1.entfernungVomUrsprung();
 
-console.log("Der Punkt mit den Koordinaten "+p1.x+
-" und "+p1.y+" liegt im "+qua+
-".ten Quadranten. Seine Entfernung beträgt: "+ent);
+
+function ausgabe(){
+    let parr=[p1,p2,p3,p4]
+    for (let i=0; i<parr.length; i++){
+
+        let qua=parr[i].quadrant();
+        let ent=parr[i].entfernungVomUrsprung();
+console.log("Der Punkt mit den Koordinaten "+parr[i].x+
+" und "+parr[i].y+" liegt im "+qua+
+".ten Quadranten. Seine Entfernung beträgt: "+ent);}}
+
+ausgabe();
