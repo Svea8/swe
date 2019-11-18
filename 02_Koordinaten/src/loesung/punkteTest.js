@@ -10,11 +10,16 @@ let l= new PunkteMenge();
 //let m=l.allePunkteAusgeben();
 //console.log(m);
 
-let h1= l.punktHinzufuegen(1,2);
-let h2= l.punktHinzufuegen(5,5);
-let h3= l.punktHinzufuegen(1,7);
-let h5= l.punktHinzufuegen(1,5);
+let h3= l.punktHinzufuegen(-5,0);
+let h5= l.punktHinzufuegen(10,0);
+let h1= l.punktHinzufuegen(0,0);
+let h2= l.punktHinzufuegen(3,0);
+
 
 let anz=l.aktuelleAnzahl();
+//let entf=l.entfernungBerechnung(h1,h2);
+let maxentf=l.maximaleEntfernungBerechnen();
+//let maxentfbest=l.maximalEntferntePunkteBestimmen();
 
-console.log(anz);
+//console.log(h1);
+console.log(maxentf);
