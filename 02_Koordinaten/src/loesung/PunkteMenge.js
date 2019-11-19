@@ -6,7 +6,7 @@ class PunkteMenge{
 
     //Methoden
     zufaelligeZahlErzeugen(){
-        this.zufallZ=Math.round((Math.random()*40)-20);
+        this.zufallZ=Math.round((Math.random()*39)-20);
         return this.zufallZ;
     }
 
@@ -37,9 +37,7 @@ class PunkteMenge{
         return anzahl;
     }
 
-    entfernungBerechnung(p,g){
-        //let ka= new Punkt(p.x,p.y);
-        //console.log(ka);
+    entfernungBerechnen(p,g){
         let px = p.x;
         let py = p.y;
         let gx = g.x;
@@ -53,7 +51,7 @@ class PunkteMenge{
         let max=0;
         for (let j=0; j<this.punkteArray.length;j++){
         for (let i=0; i<this.punkteArray.length-1; i++){
-            let entf=this.entfernungBerechnung(this.punkteArray[i],this.punkteArray[j]);
+            let entf=this.entfernungBerechnen(this.punkteArray[i],this.punkteArray[j]);
             if(entf>max){
                 max=entf;
             }}
@@ -62,21 +60,23 @@ class PunkteMenge{
         return max;
     }
 
-  /*  maximalEntferntePunkteBestimmen(){
+   maximalEntferntePunkteBestimmen(){
         let max=0;
         let punkt1;
         let punkt2;
+        let neuesArray= [];
         for (let j=0; j<this.punkteArray.length;j++){
         for (let i=0; i<this.punkteArray.length-1; i++){
-            let entf=this.entfernungBerechnung(this.punkteArray[i],this.punkteArray[j]);
+            let entf=this.entfernungBerechnen(this.punkteArray[i],this.punkteArray[j]);
             if(entf>max){
                 max=entf;
                 punkt1=this.punkteArray[i];
                 punkt2=this.punkteArray[j];
             }}
-            this.punkteArray.push(punkt1)
-            this.punkteArray.push(punkt2);
-        }
-        return this.punkteArray; 
-    }*/
+           
+        } 
+        neuesArray.push(punkt1)
+        neuesArray.push(punkt2);
+        return neuesArray; 
+    }
 }

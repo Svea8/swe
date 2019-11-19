@@ -4,22 +4,26 @@ let p3 = new Punkt(4,1);
 let p4 = new Punkt(9,3);
 let p5 = new Punkt(1,3);
 let string = p1.toString();
-//console.log(string);
+
 
 let l= new PunkteMenge();
-//let m=l.allePunkteAusgeben();
-//console.log(m);
 
+
+//neue Punkte hinzufügen
 let h3= l.punktHinzufuegen(-5,0);
 let h5= l.punktHinzufuegen(10,0);
 let h1= l.punktHinzufuegen(0,0);
 let h2= l.punktHinzufuegen(3,0);
 
-
+//Neue Variablendefinition der Methoden
 let anz=l.aktuelleAnzahl();
-//let entf=l.entfernungBerechnung(h1,h2);
+//let entf=l.entfernungBerechnen(h1,h2);
 let maxentf=l.maximaleEntfernungBerechnen();
-//let maxentfbest=l.maximalEntferntePunkteBestimmen();
+let maxentfbest=l.maximalEntferntePunkteBestimmen();
+//let m=l.allePunkteAusgeben();
 
+//Konsolenausgaben
 //console.log(h1);
-console.log(maxentf);
+//console.log(m);
+console.log(maxentfbest);
+//console.log(string);
