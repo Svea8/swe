@@ -1,22 +1,17 @@
 class Autor{
 
-
-
     constructor(nachname=null, geburtsjahr=-1){
         this.nachname=nachname;
         this.geburtsjahr=geburtsjahr;
     }
 
     equals(a){
-        let vergleich="";
-        let b=a.nachname;
+        let b=a.nachname.valueOf();
         if (this.geburtsjahr==a.geburtsjahr && this.nachname==b){
-            vergleich="gleich";
-            return vergleich;
+            return true;
         }
         else{
-            vergleich="nicht gleich";
-            return vergleich;
+            return false;
         }
     }
     toString(){
