@@ -4,9 +4,6 @@ class Bruch{
         this.nenner=ne;
     }
 
-    bruch(zahl1,zahl2){
-
-    }
 
     ausgabe(){
         let str="<"+this.zaehler+"> / <"+this.nenner+">";
@@ -14,7 +11,7 @@ class Bruch{
     }
 
     addieren(bruch){
-        let l= new BruchHelfer();
+        //let l= new BruchHelfer();
 
         let zaehler1=this.zaehler;
         let nenner1=this.nenner;
@@ -28,13 +25,13 @@ class Bruch{
             return neuerBruch;
         } 
         else{
-            let zahl=l.kgv(nenner1,nenner2);
+            let zahl=kgv(nenner1,nenner2);
             
             bruch=bruch.erweitern(zahl);
             urBruch=urBruch.erweitern(zahl);
 
             let neuerBruch= new Bruch(bruch.zaehler+urBruch.zaehler,bruch.nenner);
-            let zahl2=l.ggt(neuerBruch);
+            let zahl2=ggt(neuerBruch);
             neuerBruch= neuerBruch.kuerzen(zahl2);
 
             return neuerBruch;
@@ -42,16 +39,17 @@ class Bruch{
     }
 
     multiplizieren(bruch){
-        let l= new BruchHelfer();
+        //let l= new BruchHelfer();
         
         let zaehler2=bruch.zaehler;
         let nenner2=bruch.nenner;
         
-        let neuerBruch= new Bruch(this.zaehler*zaehler2,this.nenner*nenner2);
-        let zahl2=l.ggt(neuerBruch);
-        neuerBruch=neuerBruch.kuerzen(zahl2);
+        bruch.zaehler=this.zaehler*zaehler2;
+        bruch.nenner=this.nenner*nenner2;
+        let zahl2=ggt(bruch.zaehler,bruch.nenner);
+        bruch=bruch.kuerzen(zahl2);
 
-        return neuerBruch;
+        return bruch;
     }
 
     erweitern(zahl){

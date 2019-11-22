@@ -13,6 +13,6 @@ console.log("Ausgabe multiplizieren: "+mul.ausgabe());
 //console.log("Erweitern: "+erwe.ausgabe());
 
 
-let b=new BruchHelfer();
-let kk=b.ggt(2,3);
+//let b=new BruchHelfer();
+let kk=kgv(2,6);
 console.log("Ausgabe ggt: "+kk);

@@ -2,19 +2,27 @@ class Autor{
 
 
 
-    constructor(nachname=null, alter=-1){
+    constructor(nachname=null, geburtsjahr=-1){
         this.nachname=nachname;
-        this.geburtsjahr=2019-alter;
+        this.geburtsjahr=geburtsjahr;
     }
 
     equals(a){
-        if (this.geburtsjahr==a.geburtsjahr && this.nachname==a.nachname){
-
+        let vergleich="";
+        let b=a.nachname;
+        if (this.geburtsjahr==a.geburtsjahr && this.nachname==b){
+            vergleich="gleich";
+            return vergleich;
+        }
+        else{
+            vergleich="nicht gleich";
+            return vergleich;
         }
     }
     toString(){
-        let ausgabe=;
-        return ausgabe
+        let ausgabe="";
+        ausgabe= this.nachname+"("+this.geburtsjahr+")"
+        return ausgabe;
     }
 
 }
