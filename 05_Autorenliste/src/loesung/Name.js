@@ -16,8 +16,8 @@ class Name{
         return false;
     }
 
-    toString(vn="",nn=""){
-        let komName=vn+nn;
+    toString(){
+        let komName=this.vorname+" "+this.nachname;
         return komName;
     }
 
