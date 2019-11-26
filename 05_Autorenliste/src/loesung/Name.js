@@ -17,6 +17,19 @@ class Name{
     }
 
     toString(){
+        if (this.nachname==null && this.vorname==null){
+            let komName=" ";
+            return komName;
+        }        
+        if (this.vorname==null){
+            let komName=this.nachname;
+            return komName;  
+        }
+        if (this.nachname==null){
+            let komName=this.vorname;
+            return komName;
+        }
+
         let komName=this.vorname+" "+this.nachname;
         return komName;
     }

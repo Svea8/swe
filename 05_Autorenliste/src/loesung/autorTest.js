@@ -11,5 +11,5 @@ a4=new Autor("Svea");
 a5=new Autor();
 
 
-console.log(a1.equals(a1));
+console.log(a5.toString());
 let l=sindDuplikate(a1,a1);

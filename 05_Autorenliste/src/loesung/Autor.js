@@ -6,20 +6,21 @@ class Autor{
     }
 
     toString(){
+        let komName=this.name.toString();
+
+        if (this.sterbejahr==-1 && this.geburtsjahr==-1){
+            komName=komName+" * "+" *";
+            return komName;
+        }
         if (this.geburtsjahr==-1){
-            this.geburtsjahr="*";
+            komName= komName+" * "+this.sterbejahr;
+            return komName;
         }
         if (this.sterbejahr==-1){
-            this.sterbejahr="*";
+            komName=komName+" "+this.geburtsjahr+" *";
+            return komName;
         }
-        if (this.name.vorname==null){
-            this.name.vorname="*";
-        }
-        if (this.name.nachname==null){
-            this.name.nachname="*";
-        }
-
-        let komName=this.name.toString()+" "+this.geburtsjahr+" "+this.sterbejahr;
+        komName=komName+" "+this.geburtsjahr+" "+this.sterbejahr;
         return komName;
     }
 
