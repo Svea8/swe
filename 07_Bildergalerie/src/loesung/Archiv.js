@@ -16,5 +16,20 @@ class Archiv {
 		);
 		this.index = 0;
 	}
+
+	indexErhoehen(){
+		this.index=this.index+1;
+		if (this.index>=this.images.length){
+			this.index=0;	
+		}
+		return this.index;
+	}
+
+	naechstesBild(){
+		let el= new Archiv;
+		let i= el.indexErhoehen();
+		let arrBild=this.images[i];
+		return arrBild;
+	}
 	
 }
