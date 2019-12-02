@@ -26,10 +26,8 @@ class Archiv {
 	}
 
 	naechstesBild(){
-		let el= new Archiv;
-		let i= el.indexErhoehen();
-		let arrBild=this.images[i];
-		return arrBild;
+		this.index=archiv.indexErhoehen();
+		return this.images[this.index];
 	}
 	
 }

@@ -1,6 +1,16 @@
-let l= new Archiv;
+let archiv= new Archiv;
 
-let m= l.naechstesBild();
-let x= l.naechstesBild();
-let y= l.naechstesBild();
-console.log(y);
+
+function bildWechseln(){
+    
+    let img= document.getElementsByTagName('img');
+
+    let naeBil=archiv.naechstesBild();
+    let neuerDateiname="img/"+naeBil.src;
+
+    img[0].src=neuerDateiname;
+    img[0].setAttribute("title",naeBil.title)
+    img[0].setAttribute("alt",naeBil.alt);
+
+}
+
