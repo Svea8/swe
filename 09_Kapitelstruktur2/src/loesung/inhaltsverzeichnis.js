@@ -42,7 +42,7 @@ function ulAnfuegen(elternknoten){
 function liAnfuegen(ul,kapitel){
     let li=document.createElement('li');
     let a=document.createElement('a');
-    let h2=kapitel.getElementsByTagName('h2');
+    let h2=kapitel.getElementsByTagName('h2')[0];
     let id=h2.getAttribute("id");
     ul.appendChild(li);
     li.appendChild(a);
@@ -53,16 +53,25 @@ function liAnfuegen(ul,kapitel){
 
 function ladeInhaltsverzeichnis(){
     let nav=document.getElementById("nav");
-    let alleH2=document.getElementsByTagName("h2");
+    let neuUl;
+    //let alleH2=document.getElementsByTagName("h2");
     let kapitel=document.getElementsByTagName('div');
-    if(alleH2.length>0){
-        let neuUl=ulAnfuegen(nav,kapitel[0]);
+    
 
-        let alleH3=document.getElementsByTagName('h3');
-        for (let i=0; i<alleH3.length; i++){
-            let neuLi=liAnfuegen(alleH3[i],kapitel[0]);
-        }
-    }
+    for (i=0; i<kapitel.length;i++){
+        neuUl=ulAnfuegen(nav);
+        neuUl=liAnfuegen(neuUl,kapitel[i]);
+        nav.appendChild(neuUl);
+        let alleH3=kapitel[i].getElementsByTagName('h3');
+    
+
+    
+    for (let j=0; j<alleH3.length; j++){
+        ulAnfuegen(neuUl);
+        let neuLi=liAnfuegen(alleH3[j],kapitel[i]);
+        neuUl.appendChild(neuLi);
+        }}
+    
 }
 
 ladeInhaltsverzeichnis();
