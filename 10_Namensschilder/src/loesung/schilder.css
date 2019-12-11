@@ -1,0 +1,19 @@
+body{
+   display: flex; 
+}
+
+.schildDiv {    
+    background-color: blue;
+    margin: 20px;
+    padding: 10px;
+    width: 200px;
+    border-radius: 5px;
+    color: aliceblue;
+}
+
+.namLahGeb{
+    background-color: aliceblue;
+    width: 180px;
+    padding: 10px;
+    color: blue;
+}
