@@ -6,12 +6,16 @@
 	<link href="style.css" rel="stylesheet"></link>
 </head>
 <body>
-	<div id="bild">
-		<img src="img/img_01.jpg" alt = "Schönegg" title = "Schönegg"></img>
+	<div id="bild" onmouseover="aufBild()" onmouseout="ausBild()">
+		<img src="img/img_01.jpg" alt = "Schönegg" title = "Schönegg" ></img>
 	</div>
-	<div id="rahmen">
+
+
+	<div id="rahmen" onmouseover="zoomIn()" onmouseout="zoomOut()">
 		<img src="img/img_04.jpg" alt = "Jungfrau" title = "Jungfrau"></img>
 	</div>
+
+
 </body>
-	
+<script src="skalieren.js"></script>
 </html>
