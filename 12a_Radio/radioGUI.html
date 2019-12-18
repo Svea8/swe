@@ -1,30 +1,57 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <title>Radio</title>
+
     <link rel="stylesheet" href="src/helfer/style.css">
+
+ 
 
 </head>
 
-<body>
+ 
+
+<body onload="display()">
+
     <h1>Radio</h1>
+
     <div id="radio">
+
         <img src="src/helfer/img/radio.png" alt="Radio" width="800px">
 
+ 
 
-        <button id="an">An</button>
-        <button id="aus">Aus</button>
+        <button id="an" onclick="an()">An</button>
+
+        <button id="aus" onclick="aus()">Aus</button>
+
         <div id="display"></div>
-        <button id="lauter">+</button>
-        <button id="leiser">-</button>
+
+        <button id="lauter" onclick="lauter()">+</button>
+
+        <button id="leiser" onclick="leiser()">-</button>
+
         <br><br>
-        <input type="text" id="frequenz" placeholder="Frequenz">
+
+        <input type="text" id="frequenz" placeholder="Frequenz" onchange="frequenz()">
+
     </div>
 
+ 
+
 </body>
+
 <script src="src/loesung/Radio.js"></script>
+
 <script src="src/loesung/radioFunctions.js"></script>
+
 <script src="src/loesung/radioTest.js"></script>
+
 </html>
