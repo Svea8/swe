@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kontaktformular</title>
+    <link rel="stylesheet" href="src/helfer/style.css">
+</head>
+<body>
+    <fieldset>
+        <legend>Kontaktdaten</legend>
+        <div>
+            <label for="name">Name: </label>
+            <input type="text" id="name"/>
+        </div>
+        <div>
+            <label for="alter">Anschrift:</label>
+            <input type="text" id="alter">
+        </div>
+        <div>
+            <label for="email">eMail: </label>
+            <input type="email" id="eMail">
+        </div>
+        <div>
+            <label for="betreff">Betreff: </label>
+            <select id="betreff" size=3>
+                <option value="hinweis">Hinweis</option>
+                <option value="fragen">Anfrage</option>
+                <option value="bestellung">Bestellung</option>
+                <option value="keins">keins der Genannten</option>
+            </select>
+        </div>
+        <div>
+            <label for="news">Newsletter abonnieren: </label>
+            <input type="radio" name="news" value="ja">ja</input>
+            <input type="radio" name="news" value="nein">nein</input>
+        </div>
+        <div>
+            <label for="text">Text: </label>
+            <textarea name="text" cols="20" rows="4"></textarea>
+        </div>
+        
+        <input type="button" id="button" value="Senden"/>
+    </fieldset>
+</body>
+
+</html>
