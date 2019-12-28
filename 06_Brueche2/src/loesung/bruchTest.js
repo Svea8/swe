@@ -1,10 +1,10 @@
 let bruch1= new Bruch(1,2);
-let bruch2= new Bruch(4,2);
+let bruch2= new Bruch(4,4);
 
 //let erwe= bruch1.erweitern(6);
 //let kür= bruch1.kuerzen(2);
 
-//let add= bruch1.addieren(bruch2);
+//let add= bruch1.addieren(bruch2); 
 //let mul= bruch2.multiplizieren(bruch2);
 
 let keh=bruch2.subtrahieren(bruch1);

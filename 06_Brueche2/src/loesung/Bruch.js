@@ -21,7 +21,7 @@ class Bruch{
             bruch=bruch.erweitern(zahl);
             let newBruch=this.erweitern(zahl);
 
-            this.zaehler= this.  zaehler+bruch.zaehler;
+            this.zaehler= this.zaehler+bruch.zaehler;
             let zahl2=ggt(this);
             newBruch=this.kuerzen(zahl2);  
             this.nenner=newBruch.nenner;
@@ -45,25 +45,20 @@ class Bruch{
     erweitern(zahl){
         this.zaehler=this.zaehler*zahl;
         this.nenner=this.nenner*zahl;
-
-        let neuerBruch=new Bruch(this.zaehler,this.nenner);
-
-        return neuerBruch;
+        return this;
     }
 
     kuerzen(zahl){
         this.zaehler=this.zaehler/zahl;
         this.nenner=this.nenner/zahl;
-
-        let neuerBruch=new Bruch(this.zaehler,this.nenner);
-
-        return neuerBruch;
+        return this;
     }
 
     subtrahieren(bruch){
         let negBruch=bruchNegieren(bruch);
         let newBruch=this;
-        
-        // newBruch=newBruch.addieren(negBruch);
+         
+        newBruch=newBruch.addieren(negBruch);
+        return newBruch;
     }
 }

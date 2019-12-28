@@ -29,7 +29,6 @@ function ggt(x,y){
 
 function bruchNegieren(bruch){
     bruch.zaehler=bruch.zaehler*(-1);
-    bruch.nenner=bruch.nenner*(-1);
     return bruch;
 }
 
