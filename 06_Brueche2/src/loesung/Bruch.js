@@ -58,10 +58,19 @@ class Bruch{
     }
 
     subtrahieren(bruch){
-        let negBruch=bruchNegieren(bruch);
+        let zuNegBruch=new Bruch(bruch.zaehler,bruch.nenner);
+        let negBruch=bruchNegieren(zuNegBruch);
         let newBruch=this;
-         
         newBruch=newBruch.addieren(negBruch);
+        return newBruch;
+    }
+
+    dividieren(bruch){
+        let bruchKehrwert=new Bruch(bruch.zaehler,bruch.nenner);
+        bruchKehrwert=kehrwert(bruchKehrwert);
+
+        let divBruch=new Bruch(bruch.zaehler,bruch.nenner);
+        let newBruch=divBruch.multiplizieren(bruchKehrwert);
         return newBruch;
     }
 }
