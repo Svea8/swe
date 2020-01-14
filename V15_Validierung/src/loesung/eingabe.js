@@ -1,12 +1,12 @@
 function eingabeValidieren(){
     let test;
     
-    if(checkAlter() && checkMail() && checkName()){
+    if(checkName() && checkAlter() && checkMail()){
         test=true;
     }
     else{
         test=false;
-        alert("falsch");
+        //alert("falsch");
     }
     console.log(test);
     return test;
@@ -14,33 +14,44 @@ function eingabeValidieren(){
 
 function checkName(){
     let check=true;
-    let name=document.getElementsByName("name")[0].value;
-    if(name.length<2 || name.length>51){
+    let name=document.getElementsByName("name")[0];
+    if(name.value.length<2 || name.value.length>51){
         check=false;
         //alert("falscher name");
+        name.style.backgroundColor="red";
+        let span=document.createElement('span');
+        span.innerHTML="falscher name";
+        name.appendChild(span);
+        return check;
     }
+    name.style.backgroundColor="white";
     return check;
 }
 
 function checkAlter(){
     let check=true;
-    let alter=document.getElementsByName("alter")[0].value;
-    if(alter!=0 && (alter<=0 || alter>=110)){
+    let alter=document.getElementsByName("alter")[0];
+    if(alter.value!=0 && (alter.value<=0 || alter.value>=110)){
         check=false;
+        alter.style.backgroundColor="red";
+        return check;
     }
+    alter.style.backgroundColor="white";
     return check;
 }
 
 function checkMail(){
     let check=true;
-    let email=document.getElementsByName("email")[0].value;
-    let a=email.indexOf("@");
-    let b=email.lastIndexOf(".")
-    if(email.length>4 && a<b-1 && a>-1 && b>-1){
+    let email=document.getElementsByName("email")[0];
+    let a=email.value.indexOf("@");
+    let b=email.value.lastIndexOf(".")
+    if(email.value.length>4 && a<b-1 && a>-1 && b>-1){
         check=true;
+        email.style.backgroundColor="white";
     }
     else{
         check=false;
+        email.style.backgroundColor="red";    
     }
     return check;
 }
