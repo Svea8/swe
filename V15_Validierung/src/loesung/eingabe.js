@@ -6,7 +6,7 @@ function eingabeValidieren(){
     }
     else{
         test=false;
-        //alert("falsch");
+        alert("falsch");
     }
     console.log(test);
     return test;
