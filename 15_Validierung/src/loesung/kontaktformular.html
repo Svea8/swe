@@ -4,26 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Kontaktformular</title>
-    <link rel="stylesheet" href="src/helfer/style.css">
 </head>
 <body>
+    <form name="formular">
     <fieldset>
         <legend>Kontaktdaten</legend>
         <div>
             <label for="name">Name: </label>
-            <input type="text" id="name"/>
+            <input type="text" name="name"/>
         </div>
         <div>
-            <label for="alter">Anschrift:</label>
-            <input type="text" id="alter">
+            <label for="alter">Alter:</label>
+            <input type="text" name="alter">
         </div>
         <div>
             <label for="email">eMail: </label>
-            <input type="email" id="eMail">
+            <input type="email" name="email">
         </div>
         <div>
             <label for="betreff">Betreff: </label>
-            <select id="betreff" >
+            <select name="betreff" >
                 <option value="wahl">Bitte wählen</option>
                 <option value="hinweis">Hinweis</option>
                 <option value="fragen">Anfrage</option>
@@ -40,8 +40,10 @@
             <textarea name="text" cols="20" rows="4"></textarea>
         </div>
         
-        <input type="button" id="button" value="Senden"/>
+        <input type="button" id="button" value="Senden" onclick="eingabeValidieren()"/>
     </fieldset>
+    </form>
+    <script src="eingabe.js"></script>
 </body>
 
 </html>
