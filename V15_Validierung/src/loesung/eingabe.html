@@ -3,23 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Buttons</title>
+    <title>Kontaktformular</title>
 </head>
-
 <body>
-
-<fieldset>
-    <legend>Kontaktdaten</legend>
-    <label for="name">Name: </label>
-    <input type="text" id="name"/>
-    <label for="alter">Alter:</label>
-    <input type="number" id="alter">
-
-    <label for="email">eMail: </label>
-    <input type="email" id="eMail">
-    <input type="button" id="button" value="Senden"/>
-</fieldset>
-
+    <form name="formular">
+    <fieldset>
+        <legend>Kontaktdaten</legend>
+        <div>
+            <label for="name">Name: </label>
+            <input type="text" name="name"/>
+        </div>
+        <div>
+            <label for="alter">Alter:</label>
+            <input type="text" name="alter">
+        </div>
+        <div>
+            <label for="email">eMail: </label>
+            <input type="email" name="email">
+        </div>
+        <div>
+            <label for="betreff">Betreff: </label>
+            <select name="betreff" >
+                <option value="wahl">Bitte wählen</option>
+                <option value="hinweis">Hinweis</option>
+                <option value="fragen">Anfrage</option>
+                <option value="bestellung">Bestellung</option>
+                <option value="keins">keins der Genannten</option>
+            </select>
+        </div>
+        <div>
+            <label for="news">Newsletter abonnieren: </label>
+            <input type="radio" name="news" value="ja">ja</input>
+            <input type="radio" name="news" value="nein">nein</input>
+        </div>
+        <div>
+            <label for="text">Text: </label>
+            <textarea name="text" cols="20" rows="4"></textarea>
+        </div>
+        
+        <input type="button" id="button" value="Senden" onclick="eingabeValidieren()"/>
+    </fieldset>
+    </form>
+    <script src="eingabe.js"></script>
 </body>
 
 </html>
