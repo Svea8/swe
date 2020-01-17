@@ -11,19 +11,19 @@
         <legend>Kontaktdaten</legend>
         <div>
             <label for="name">Name: </label>
-            <input type="text" name="name"/>
+            <input type="text" name="name" onchange="checkName()">
         </div>
         <div>
             <label for="alter">Alter:</label>
-            <input type="text" name="alter">
+            <input type="text" name="alter" onchange="checkAlter()">
         </div>
         <div>
             <label for="email">eMail: </label>
-            <input type="email" name="email">
+            <input type="email" name="email" onchange="checkMail()">
         </div>
         <div>
             <label for="betreff">Betreff: </label>
-            <select name="betreff" >
+            <select name="betreff">
                 <option value="wahl">Bitte wählen</option>
                 <option value="hinweis">Hinweis</option>
                 <option value="fragen">Anfrage</option>
